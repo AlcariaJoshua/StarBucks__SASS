@@ -1,0 +1,131 @@
+.links{
+    padding-top: 2rem;
+    background-color: $clr-light;
+    border-top: 1px solid #cccccc;
+  
+    .container{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            align-items: center;
+            position: relative;
+
+           
+        }
+    }
+
+    &__item{
+        
+        h4{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: clamp(1.7rem, 6vw, 1.5rem);
+            font-weight: 100;
+            @include mediaQuery($break-lg){
+                font-weight: 600;
+                font-size: 2rem;
+                opacity: .8;
+            }
+            i{
+                transition: .5s ease;
+                &.open{
+                    transform: rotate(-180deg);
+                    transition: .5s ease;
+                }
+            }
+            @include mediaQuery($break-lg){
+                i{
+                    display: none;
+                }
+            }
+           
+        }
+        ul{
+            max-height: 0;
+            overflow: hidden;
+            transition: .5s ease;
+            @include mediaQuery($break-lg){
+                max-height: unset;
+            }
+            &.open{
+                max-height: 25rem;
+                transition: .5s ease;
+            }
+            li {
+                margin: 2rem 0;
+                opacity: .9;
+                a{
+                    color: $clr-dark;
+                    font-size: 1.5rem;
+                }
+            }
+            li:hover{
+                opacity: 1;
+            }
+           
+           
+        }
+
+        &:nth-child(2){
+            margin: 3rem 0;
+        }
+
+        
+    }
+    .link__item{
+        margin: 3rem 0;
+    
+
+        
+            a{
+                text-decoration: none;
+                font-weight: 100;
+                color: #000000;
+                font-size: clamp(1.7rem, 6vw, 1.5rem);
+                opacity: 1;
+                @include mediaQuery($break-lg){
+                    position: absolute;
+                    top: 3rem;
+                    font-size: clamp(1.7rem, 6vw, 1.5rem);
+                    font-weight: 600;
+                    font-size: 2rem;
+                    opacity: .8;
+                }
+                
+            }
+            .starbucksLogo{
+                display: none;
+            }
+
+            @include mediaQuery($break-lg){
+                 .starbucksLogo{
+                    display: block;
+                position: absolute;
+                right: -20rem;
+                top: 11rem;
+                transform: rotate(-90deg);
+                font-size: 2.5rem;
+                font-weight: 800;
+                opacity: .8;
+            }
+            }
+           
+        }
+}
+
+.divider{
+    .row__divider{
+        border-top: 1px solid #cccccc;
+        height: 1px;
+         width: 80%;
+         margin: 0 auto;
+         @include mediaQuery($break-lg){
+            width: 73%;
+         }
+    }
+}
