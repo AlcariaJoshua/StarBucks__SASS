@@ -274,7 +274,8 @@ body {
   position: absolute;
   top: 15rem;
   left: 5rem;
-  font-size: 3rem;
+  font-size: 4rem;
+  width: 70%;
 }
 @media screen and (min-width: 970px) {
   .banner h1 {
@@ -286,11 +287,12 @@ body {
 }
 .banner a {
   position: absolute;
-  top: 22rem;
+  top: 30rem;
   left: 5rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
   color: #1e3932;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border: 1px solid #1e3932;
   border-radius: 10rem;
 }
@@ -299,7 +301,7 @@ body {
     position: absolute;
     top: 29rem;
     left: 30rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: #1e3932;
     font-weight: 600;
     padding: 1rem 2rem;
@@ -311,7 +313,7 @@ body {
 }
 @media screen and (min-width: 970px) {
   .items {
-    max-width: 150rem;
+    max-width: 140rem;
     margin: 0 auto;
   }
 }
@@ -329,6 +331,8 @@ body {
 .items .row_1 img {
   width: 100%;
   height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .items .row_1 .items__text {
   background-color: #006241;
@@ -360,16 +364,49 @@ body {
   border: 1px solid #ffffff;
   border-radius: 10rem;
 }
+.items .row_1 .items__text .btn a:hover {
+  opacity: 0.7;
+}
+.items .gridmo {
+  grid-row-gap: 2rem;
+}
+.items .gridmo .row_1 {
+  padding-top: 3rem;
+}
 @media screen and (min-width: 970px) {
   .items .gridmo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2rem;
     margin: 3rem 0;
   }
   .items .gridmo .row_1 {
     display: flex;
+    padding-top: 0;
   }
+}
+.items .row_1 {
+  padding-top: 3rem;
+}
+@media screen and (min-width: 970px) {
+  .items .row_1 {
+    padding-top: 0;
+  }
+}
+.items #kapos {
+  background-color: #d4e9e2;
+  color: black;
+}
+.items #kapos h3 {
+  color: black;
+}
+.items #kapos a {
+  color: black;
+  border: 1px solid black;
+}
+.items #kapos P {
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 @media screen and (min-width: 970px) {
   .items .reversemo {
@@ -405,7 +442,7 @@ body {
 }
 
 #cyan_color {
-  background-color: aliceblue;
+  background-color: #d4e9e2;
   color: black;
 }
 #cyan_color h3 {
@@ -416,14 +453,285 @@ body {
   border: 1px solid black;
 }
 
-.header__wrapper {
+.stars h3 {
+  text-align: center;
+}
+.stars__nav {
+  padding-top: 5rem;
+  background-color: #D4E9E2;
+  text-align: center;
+}
+.stars__nav ul {
   display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.stars__nav ul li {
+  padding: 2rem;
+  border-bottom: 3px solid transparent;
+}
+.stars__nav ul li.active {
+  border-bottom: 3px solid #ffa700;
+}
+.stars__nav ul li a {
+  font-size: 2rem;
+  color: #2b2b2b;
+}
+.stars .coffee-tab {
+  background-color: aquamarine;
+  padding: 5rem 0;
+}
+.stars .coffee-tab__content {
+  display: none;
+  text-align: center;
+  margin: 0 2rem;
+}
+.stars .coffee-tab__content.active {
+  display: block;
+}
+.stars .coffee-tab__content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: center center;
+     object-fit: center center;
+  display: block;
+}
+.stars .coffee-tab__content__text h2 {
+  margin: 2rem 0;
+}
+
+header {
+  margin-bottom: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+header .container .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+@media screen and (min-width: 970px) {
+  header .container .header__wrapper .branding {
+    display: flex;
+    align-items: center;
+  }
+  header .container .header__wrapper .branding .branding__links {
+    margin-left: 3rem;
+  }
+  header .container .header__wrapper .branding .branding__links ul {
+    display: flex;
+  }
+  header .container .header__wrapper .branding .branding__links ul li a {
+    color: black;
+    padding-left: 3rem;
+    font-size: 1.8rem;
+  }
+  header .container .header__wrapper .branding .branding__links ul li a:hover {
+    color: #006241;
+  }
+}
+header .container .header__wrapper .branding img {
+  width: 15%;
+}
+@media screen and (min-width: 970px) {
+  header .container .header__wrapper .branding img {
+    width: 6rem;
+  }
+}
+header .container .header__wrapper .branding .branding__links {
+  display: none;
+}
+@media screen and (min-width: 970px) {
+  header .container .header__wrapper .branding .branding__links {
+    display: block;
+  }
+}
+header .container .header__wrapper .burger__btn {
+  transition: 0.5s ease;
+  width: auto;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 970px) {
+  header .container .header__wrapper .burger__btn {
+    display: none;
+  }
+}
+header .container .header__wrapper .burger__btn span {
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  display: block;
+  background-color: black;
+  transition: 0.5s ease;
+}
+header .container .header__wrapper .open span:nth-child(1) {
+  transform: translate(0, 10px) rotate(225deg);
+  transition: 0.5s ease;
+}
+header .container .header__wrapper .open span:nth-child(2) {
+  transform: translate(0, 10px) rotate(45deg);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+header .container .header__wrapper .open span:nth-child(3) {
+  transform: translate(0, -2px) rotate(-225deg);
+  transition: 0.5s ease;
+}
+header .container .header__wrapper .navigation__btn {
+  display: none;
+}
+@media screen and (min-width: 970px) {
+  header .container .header__wrapper .navigation__btn {
+    display: block;
+  }
+  header .container .header__wrapper .navigation__btn ul {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  header .container .header__wrapper .navigation__btn ul li {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+  }
+  header .container .header__wrapper .navigation__btn ul li.indent__link {
+    font-weight: 600;
+  }
+  header .container .header__wrapper .navigation__btn ul li.indent__link:hover {
+    color: #006241;
+  }
+  header .container .header__wrapper .navigation__btn ul li.btn__sign {
+    padding: 0.5rem 2rem;
+    border: 1px solid black;
+    border-radius: 30rem;
+  }
+  header .container .header__wrapper .navigation__btn ul li.btn__sign:hover {
+    opacity: 0.7;
+  }
+  header .container .header__wrapper .navigation__btn ul li.btn__join {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 30rem;
+  }
+  header .container .header__wrapper .navigation__btn ul li.btn__join:hover {
+    opacity: 0.8;
+  }
+}
+
+.toggle {
+  position: absolute;
+  background-color: white;
+  height: 531vh;
+  right: 0;
+  width: 40rem;
+  z-index: 1;
+  display: none;
+  transition: 0.5s ease;
+}
+.toggle ul.btn__link {
+  position: relative;
+}
+.toggle ul.btn__link li {
+  margin: 4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.toggle ul.btn__link li a {
+  color: black;
+}
+.toggle ul.btn__link li.indent__link {
+  text-indent: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.toggle ul.btn__link li.btn__sign {
+  border: 1px solid black;
+  display: inline;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  font-size: 1.5rem;
+}
+.toggle ul.btn__link li.btn__join {
+  position: absolute;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+}
+.toggle hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  outline: none;
+  opacity: 0.3;
+}
+
+.toggle.open {
+  display: block;
+  transition: 0.5s ease;
+}
+footer {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 970px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+footer .social__wrapper {
+  margin-bottom: 2rem;
+}
+footer .social__wrapper i {
+  font-size: 3rem;
+  padding-right: 2rem;
+}
+footer .social__wrapper i:hover {
+  transform: translateY(-15px);
+  transition: 0.5s ease;
+}
+@media screen and (min-width: 970px) {
+  footer .footer__links {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 970px) {
+  footer .footer__links ul {
+    display: flex;
+  }
+}
+footer .footer__links ul li {
+  padding: 1.5rem 0;
+}
+@media screen and (min-width: 970px) {
+  footer .footer__links ul li {
+    padding-right: 3rem;
+  }
+}
+footer .footer__links ul li a {
+  color: black;
+}
+footer .footer__links ul li a:hover {
+  color: #006241;
+}
+footer .footer__links p {
+  padding-top: 2rem;
 }
 
 .links {
   padding-top: 2rem;
   background-color: #ffffff;
   border-top: 1px solid #cccccc;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .links .container {
   padding-top: 0;
