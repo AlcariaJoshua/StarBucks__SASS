@@ -17,12 +17,11 @@ kamote.forEach((kamoteq) => {
 })
 
 const starnav = document.querySelectorAll(".star__nav__link");
-const starContent = document.querySelectorAll(".coffee-tab__content");
-
+const starContent = document.querySelectorAll(".coffee-tab__content ");
 starnav.forEach((star) => {
   star.addEventListener('click', () =>{
     removeActiveStar();
-    star.classList.add('.active');
+    star.classList.add('active');
     const activeContent= document.querySelector(`#${star.id}-content`);
     removeActiveContent();
     activeContent.classList.add("active");
@@ -34,7 +33,7 @@ function removeActiveStar() {
     star.classList.remove('active');
   })
 }
-function removeActiveStar() {
+function removeActiveContent() {
   starContent.forEach((star) => {
     star.classList.remove('active');
   })
